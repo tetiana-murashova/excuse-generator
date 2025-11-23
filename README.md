@@ -1,160 +1,114 @@
-# 📊 Murray Irrigation Dashboard
 
-A lightweight React + TypeScript dashboard for visualizing time-series data with interactive zooming and panning.  
-Built with **Vite**, **Chart.js**, and **TailwindCSS**.
+# 🤖 Excuse Generator Machine
 
----
-
-## 🚀 Features
-
-- 📈 Interactive time-series charts using Chart.js
-- 🔍 Zoom & pan support via chartjs-plugin-zoom
-- 🕒 Time-based x-axis powered by chartjs-adapter-date-fns
-- 🎨 Modern responsive layout using TailwindCSS
-- ⚡ Super-fast dev server with Vite
-- ✅ Clean, fully typed codebase (TypeScript)
-- 💅 Auto-formatting with Prettier
+A fun and interactive web app that generates random excuses for developers, managers, QA engineers, interns, and even AI.  
+Built with **React + TypeScript + Tailwind**, with smooth animations and a playful UX.
 
 ---
 
-## 🧩 Tech Stack
+## ✨ Features
 
-| Category | Technology |
-|-----------|-------------|
-| Framework | React 18 + TypeScript |
-| Charts | Chart.js, chartjs-plugin-zoom, chartjs-plugin-annotation |
-| Date Adapter | chartjs-adapter-date-fns |
-| Styling | TailwindCSS |
-| Build Tool | Vite |
-| Code Quality | Prettier |
-| Package Manager | npm |
+### 🎲 Random Excuse Generator  
+- Pick a category (Developer / Manager / QA / Intern / AI / Any).  
+- Generate a random excuse with one click.
+
+### 📋 One-Click Copy  
+- Copy the excuse to clipboard for Slack, Jira, email, or emergencies 😅.
+
+### 🧑‍💼 Corporate Translator  
+- Instantly converts a funny excuse into a “serious” corporate-sounding version.
+
+### 🌙 Dark / Light Theme  
+- Modern UI with smooth transitions.
+
+### 🎞 Animations  
+- Excuses animate in using Framer Motion.
+
+### ⌨️ Keyboard Shortcuts  
+- Press **G** → Generate  
+- Press **C** → Copy  
 
 ---
 
-## 🛠️ Setup
+## 🧱 Tech Stack
 
-### 1️⃣ Install dependencies
-```bash
-npm install
+- **React 18**  
+- **TypeScript**  
+- **Vite**  
+- **Tailwind CSS**  
+- **Framer Motion**  
+- **Clipboard API**  
+- **JSON data source** for excuses  
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├─ App.tsx
+├─ main.tsx
+├─ index.css
+└─ data/
+   └─ excuses.json
 ```
 
-### 2️⃣ Start development server
+---
+
+## 🚀 Getting Started
+
+### Install dependencies
+```bash
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
+
+### Run the development server
 ```bash
 npm run dev
 ```
 
-### 3️⃣ Build for production
+Then open:  
+👉 http://localhost:5173
+
+---
+
+## 🏗 Build for production
+
 ```bash
 npm run build
-```
-
-### 4️⃣ Preview production build
-```bash
 npm run preview
 ```
 
 ---
 
-## 🎨 TailwindCSS Setup
+## 🧩 Customization
 
-Your TailwindCSS configuration should look like this (`tailwind.config.js`):
-
-```js
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+### Add or edit excuses  
+Modify this file:
+```
+src/data/excuses.json
 ```
 
-Use Tailwind utility classes directly in your JSX:
+### Change the theme / UI  
+All styling is in Tailwind classes — edit directly in components.
 
-```tsx
-<div className="flex flex-col items-center p-4 bg-gray-50 min-h-screen">
-  <h1 className="text-2xl font-semibold mb-4">Murray Irrigation Dashboard</h1>
-  <TimeSeriesChart />
-</div>
-```
-
----
-
-## 🧠 TypeScript Types
-
-Located in [`src/types/chartTypes.ts`](src/types/chartTypes.ts):
-
-- `Point`, `Tag`, `Asset`, `Site`, `DataJson`
-- `TimeSeriesDataset`, `TimeSeriesChartData`
-- `LineChartOptionsWithZoom` for Chart.js + zoom plugin
+### Ideas to extend
+- Save generated excuses in history  
+- “Share to Slack” button  
+- Export excuse as PNG  
+- Random avatar per excuse  
+- Add tags/filtering  
 
 ---
 
-## 📊 Example Chart Component
-
-```tsx
-import { Line } from 'react-chartjs-2';
-import { options, data } from './chartConfig';
-
-export function TimeSeriesChart() {
-  return (
-    <div className="w-full h-[400px]">
-      <Line data={data} options={options} />
-    </div>
-  );
-}
-```
+## 📄 License  
+MIT License — free for personal and commercial use.
 
 ---
 
-## 🧹 Code Formatting
-
-Prettier runs automatically on save in VS Code.
-
-Manual formatting:
-```bash
-npx prettier --write src/.
-```
-
-Recommended VS Code settings (`.vscode/settings.json`):
-
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-}
-```
-
----
-
-## 🌍 Deployment
-
-### ✅ Deploy to Vercel
-
-1. Go to [vercel.com](https://vercel.com/)
-2. Click **"Add New Project" → "Import Git Repository"**
-3. Select your GitHub repo.
-4. Build settings:
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. Click **Deploy** 🚀
-
-> Your dashboard will be live at: `https://your-project-name.vercel.app`
-
----
-
-
-## 💡 Tips
-
-- Use `as const` for Chart.js scale types (`type: 'time' as const`)
-- For better date formatting, ensure you register `'chartjs-adapter-date-fns'`
-- Zoom and pan modes must be `'x' | 'y' | 'xy'`
-- Prettier auto-formats on `Cmd + S` (if configured)
-- Use Tailwind for layout and responsive sizing (`w-full`, `h-[400px]`, etc.)
-
----
-
-## 📜 License
-
-MIT © 2025 Tetiana Murashova
-# excuse-generator
+Created with ❤️  
+By **Tetiana Murashova**

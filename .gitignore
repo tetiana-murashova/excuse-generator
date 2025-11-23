@@ -1,0 +1,39 @@
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Vite cache
+.vite/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Typescript
+*.tsbuildinfo
+
+# MacOS cache
+.AppleDouble
+.LSOverride
+
+# Optional: if using Tailwind JIT cache
+.tailwindcss-cache/

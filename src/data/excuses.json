@@ -1,0 +1,26 @@
+{
+  "developer": [
+    { "text": "It works on my machine." },
+    { "text": "I didn’t touch that part of the code." },
+    { "text": "It’s not a bug, it’s a feature." },
+    { "text": "Prettier did this, not me." },
+    { "text": "The build failed, but spiritually it succeeded." }
+  ],
+  "manager": [
+    { "text": "We’re aligning priorities with future outcomes." },
+    { "text": "Let’s park this for the next sprint." },
+    { "text": "We’ll circle back after the retro." }
+  ],
+  "qa": [
+    { "text": "It passed locally, so it must be an environment issue." },
+    { "text": "Repro steps? It’s random. Embrace chaos." }
+  ],
+  "intern": [
+    { "text": "I thought git push -f was faster." },
+    { "text": "I was just experimenting in production." }
+  ],
+  "ai": [
+    { "text": "My model wasn’t trained on that scenario." },
+    { "text": "Hallucination? No, that’s called creativity." }
+  ]
+}
